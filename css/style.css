@@ -1,0 +1,868 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400&display=swap');
+html, body
+{
+    height: 100%;
+    margin:0;
+}
+h1,h2,h3
+{
+    font-family: "Roboto Slab";
+}
+h1
+{
+    font-weight: 700;
+}
+h2
+{
+    font-weight: 400;
+}
+p, a
+{
+    font-family: "Fira Sans";
+    color: #25282A;
+}
+a
+{
+    text-decoration: none;
+}
+.input, #anno,#corsodiLaurea, input#searchIns.searchNome.ui-autocomplete-input
+{
+    width: 270px;
+    height: 30px;
+    outline: none;
+    padding-left:10px;
+    margin-bottom:10px;
+    border:1px solid #D9D9D6;
+    box-sizing:border-box;
+}
+input:focus:required:invalid, #corsodiLaurea:focus:required:invalid, #anno:focus:required:invalid
+{
+    border:1px solid red;
+}
+.singleInput
+{
+    width:270px;
+    margin:0 auto;
+}
+.error
+{
+    text-align: right;
+    height:30px; 
+    margin-top:-10px;
+    font-size:0.8rem;  
+}
+.errorAfterPost
+{
+    width:400px;
+    height:30px;
+    margin: 0 auto;
+    margin-bottom:10px;
+    margin-top:10px;
+    border:1px solid #C8102E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error p, .errorAfterPost p
+{
+    color:#C8102E;
+    padding:0;
+    margin:0;
+}
+
+.blueHeader
+{
+    height: 250px;
+    background-color: #199BFC;
+    width: 100%;
+}
+.profileBoxExitRight
+{
+    margin-top:6px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.headerLink
+{
+    padding-top:20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    height: 36px;
+}
+.homeBox
+{
+    flex-basis: 15%;
+    height: 36px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.homeBox img
+{
+    width:86px;
+    height: 36px;
+}
+.searchBox
+{
+    flex-basis: 70%;
+    height: 36px;
+}
+.searchIcons
+{
+    display: flex;
+    justify-content: center;
+}
+input#search.ui-autocomplete-input
+{
+    margin-top:0;
+    height: 31px;
+}
+.specialSearch#search.ui-autocomplete-input
+{
+    height: 35px;
+}
+.specialA
+{
+    font-size: 16px;
+    line-height: 1.2;
+}
+.searchBox input[type="text"]
+{
+    width:80%;
+    display: inline-block;
+    padding-left:10px;
+}
+.blueHeaderBig .searchBox input[type="text"]
+{
+    height: 37px;
+}
+.searchBox input[type="image"]
+{
+    display: inline-block;
+    margin-left:-36px;
+}
+.accountBox, .loggedBox, .mobileLoggedBox
+{
+    flex-basis:15%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    height: 36px;
+    justify-content: space-evenly;
+}
+.mobileLoggedBox
+{
+    display: none;    
+}
+.accountBox
+{
+    align-items: center;
+}
+.accountBox a, .loggedBox a, .loggedBoxSmall a, .headerRight a
+{
+    color:white;
+}
+.profileBox, .profileBoxExit
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+.infoHome
+{
+    width: 300px;
+    height: auto;
+    margin:0 auto;
+    margin-top:-70px;
+    background-color:white;
+    text-align:center;
+    padding:20px;
+    box-sizing: border-box;
+}
+.corsi
+{
+    width: 200px;
+    height: 50px;
+    margin:0 auto;
+    margin-top:70px;
+    margin-bottom:70px;
+}
+.buttonCorsi
+{
+    width:inherit;
+    height: inherit;
+    background-color: #D9D9D6;
+    outline: none;
+    border:transparent;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.buttonCorsi a
+{
+    color:#199BFC;
+    text-transform: uppercase;
+}
+
+.content
+{
+    min-height: calc(100vh - 70px);
+}
+footer
+{
+    width: 100%;
+    height: 40px; 
+    text-align: center;
+    margin-top:30px;
+}
+footer img
+{
+    width:60px;
+    height: 25px;
+}
+.searchForm
+{
+    margin:0 auto;
+    width:80%;
+    display: flex;
+    justify-content: center;
+}
+.containerList
+{
+    margin:0 auto;
+    margin-top:30px;
+    width: 90%;
+    display: grid;
+    grid-row-gap:50px;
+    grid-column-gap: 11%;
+    grid-template-columns: 26% 26% 26%;
+}
+.singleItem
+{
+    height:130px;
+    display:flex;
+    align-items: center;
+    padding-left:10px;
+    justify-content: space-between;
+    background-color: #D9D9D6;
+}
+.singleItemText
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 80%;
+}
+.nomeSemestre, .codiceCfu
+{
+    display:flex;
+    flex-direction:column;
+}
+.nomeSemestre p, .codiceCfu p
+{
+    padding:0;
+    margin:0;
+}
+.button
+{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button, .searchButton, .buttonModifica
+{
+    width: 150px;
+    outline: none;
+    margin-top:20px;
+    text-transform: uppercase;
+    color:white;
+    background-color:#199BFC;
+    border:1px solid transparent;
+    cursor: pointer;
+}
+.button a
+{
+    color:white;
+}
+.button
+{
+    height: 35px;
+}
+.searchButton
+{
+    height:30px;
+}
+.buttonModifica
+{
+    background-color: #199BFC;
+    color: #D9D9D6;
+    height: 30px;
+    margin-bottom: 2%;
+    cursor: pointer;
+}
+.nameCourse, .nameUser
+{
+    width:70%;
+    margin:0 auto;
+    text-align:center;
+    margin-top:80px;
+}
+.nameUser
+{
+    margin-top:50px;
+}
+.nameCourse h3, .nameUser h3, .nameCourse h2
+{
+    color:white;
+}
+.boxCourse
+{
+    display:flex;
+    flex-direction: row;
+    width: 60%;
+    margin:0 auto;
+    justify-content: space-evenly;
+    margin-top:-2%;
+}
+.itemBoxCourse
+{
+    flex-basis: 25%;
+    border:1px solid #D9D9D6;
+    background-color: #D9D9D6;
+    height:150px;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+.createThread
+{
+    margin:0 auto;
+    width: 150px;
+    height: 40px;
+    margin-top:30px;
+    background-color: white;
+    border:transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.createThread a
+{
+    color:#199BFC;
+}
+.containerMessageList, .containerMessageListST
+{
+    width:50%;
+    margin: 0 auto; 
+    margin-top:2%; 
+    display: flex;
+    flex-direction: column;
+}
+.singleMessage
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #D9D9D6;
+    background-color: #D9D9D6;
+    opacity: 0.9;
+    margin-bottom:2%;  
+}
+.singleMessage p, .singleMessage a
+{
+    padding:5px;
+    font-size: 16px;
+}
+.singleMessageIcons, .singleMessageHeart
+{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.singleMessageHeart
+{
+    display: none;
+}
+label
+{
+    margin-top:5px;
+}
+.likes
+{
+    display: flex;
+    flex-direction: row;
+    height: 34px;
+    align-items: center;
+}
+.likesImg
+{
+    width:24px;
+    height: 24px;
+}
+.numlikes
+{
+    height: 24px;
+}
+.containerQA
+{
+    width:50%;
+    height: auto;
+    margin:0 auto;
+}
+.tokenfield
+{
+    height: 0px;
+    min-height: 36px;
+}
+.tokenfield .token
+{
+    margin: 0 5px 5px 0;
+}
+input[type="text"]
+{
+    margin-top:0;
+}
+.buttonContainer
+{
+    width:230px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top:2%;
+}
+.buttonPost
+{
+    width:inherit;
+    padding:10px;
+    text-transform: uppercase;
+    background-color: #199BFC;
+    outline: none;
+    color: white;
+    height: inherit;
+    border:transparent;
+}
+.containerCreateThread
+{
+    margin:0 auto;
+    width: 70%;
+    margin-top:5%;
+    text-align: center;
+}
+.boxLogSign
+{
+    width:300px;
+    margin: 0 auto;
+    margin-top:2%;
+    text-align: center;
+}
+.boxForLogin
+{
+    margin:0 auto;
+    margin-top: 2%;
+    width:30%;
+    text-align: center;
+}
+.fileContainer
+{
+    width:40%;
+    margin:0 auto;
+    margin-top:2%;
+    display: flex;
+    flex-direction: column;
+}
+.singleFile, .singleItemSearch, .singleFileSmall
+{
+    background-color: #D9D9D6;
+    opacity: 0.8;
+    margin-bottom:2%;
+    height:100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.singleFileSmall
+{
+    display: none;    
+}
+.singleItemSearch
+{
+    background-color:transparent;
+    opacity: 1;
+    margin:0
+}
+.fileImg
+{
+    width: 48px;
+    height: 58px;
+}
+.singleFileText
+{
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+
+.singleFileIT, .filePost, .singleItemSearchIT
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 2%;
+}
+.singleItemSearchIT
+{
+    justify-content: space-between;
+    margin:0;    
+}
+.singleFile a, .singleFileSmall a
+{
+    margin-right: 2%;
+}
+.singleFile p, .singleFileSmall p
+{
+    margin:6px 0 0 0;
+}
+.buttonContainerProfile
+{
+    width:50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:0 auto;
+    margin-top:3%;
+}
+#anagraficaButton, #postButton, #puntiButton
+{
+    width:20%;
+    height:50px;
+    background-color: #D9D9D6;
+    border: transparent;
+    outline: none;
+    color:#199BFC;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#anagrafica, #post, #punti, #modify,#showSingle
+{
+    display: none;
+}
+.showInfo, .showInfoVisit
+{
+    margin:0 auto;
+    width: 50%;
+    background-color: #D9D9D6;
+    margin-top:-30px;
+    opacity: 0.9;
+}
+.showInfoVisit
+{
+    margin-top: -1%;
+}
+#modifica
+{
+    text-align: right;
+}
+#modifica img
+{
+    margin-top:1%;
+    margin-right: 2%;
+}
+.anagraficaText
+{
+    margin:0 auto;
+    display: grid;
+    flex-direction: column;
+    align-items:center;
+    width: 100%;
+    grid-row-gap:10px;
+    grid-template-columns: 50% 50%;
+}
+.singleTextLeft
+{
+    padding-left:40%;
+}
+.modificaUser, .modificaPwd
+{
+    width:50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.showPoints
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.pointsBig
+{
+    width: 180px;
+    height: 180px;
+    border:3px solid #25282A;
+    border-radius: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:150px;
+    font-family: "Fira Sans";
+    margin-top:3%;
+}
+.puntiSingoli
+{
+    text-align: center;
+}
+.showSinglePoint
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    margin:0 auto;
+}
+.singleRowPoints
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.pointsSmall
+{
+    width:40px;
+    height: 40px;
+    border-radius: 20px;
+    border:2px solid #25282A;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 2vw;
+    font-family: "Fira Sans";
+}
+.showPost, .showPostVisit
+{
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:-30px;
+    opacity: 0.9;
+}
+.showPostVisit
+{
+    margin-top:-1%;
+}
+.textPost
+{
+    padding-left:20px;
+}
+.singlePost
+{
+    width: 70%;
+    background-color:#D9D9D6;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+.singlePost img
+{
+    width: 36px;
+    height: 46px;
+}
+.data
+{
+    align-self: flex-end;
+    padding-right: 20px;
+    font-size:0.8rem;
+}
+.resultTag
+{
+    text-align: center;
+}
+.showResult
+{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-row-gap:50px;
+    grid-column-gap: 11%;
+    grid-template-columns: 26% 26% 26%;
+}
+.showMatricola
+{
+    display:none;
+}
+@media screen and (max-width: 1024px)
+{
+     .accountBox, .loggedBox, .puntiSingoli a, .showSinglePoint
+     {
+         display: none;
+     }
+     .mobileLoggedBox
+     {
+        display: flex;
+        align-items: baseline;
+     }
+     .searchBox input[type="text"], .singleMessage
+     {
+         width:80%;
+     }
+     .homeBox img
+     {
+         padding-left:7px;
+         width: 70px;
+     }
+     .searchForm, .star, .singleFile, .singleMessageIcons, .infoMessage
+     {
+         display: none;
+     }
+     .containerList
+     {
+         grid-template-columns: 44% 44%;
+         grid-column-gap: 12%;
+         flex-wrap: wrap;
+         width: 90%;
+         margin-top:-80px;
+         margin-bottom: 130px;
+     }
+     .showResult
+     {
+         display: flex;
+         flex-direction: column;
+     }
+     .singleItemSearchIT
+     {
+        width: 90%;
+        justify-content: space-evenly;
+    }
+     .singleItem
+     {
+         height: 160px;
+         opacity: 0.9;
+     }
+     .nameCourse
+     {
+         margin-top:50px;
+     }
+     .boxCourse, .fileContainer
+     {
+         width: 100%;
+         margin-top:-50px;
+     }
+     .itemBoxCourse
+     {
+         height: 100px;
+     }
+     .singleFileSmall
+     {
+         display: flex;
+         margin: 0 auto;
+         width: 80%;
+         margin-bottom:5%;
+     }
+     .boxForLogin
+     {
+         margin-top:50px;
+     }
+     .containerMessageList, .containerMessageListST, .singlePost, .modificaUser, .modificaPwd
+     {
+         width: 100%;
+     }
+     .containerMessageListST
+     {
+         margin-top:-100px;
+     }
+     .singleMessage
+     {
+         margin: 0 auto;
+         margin-bottom: 20px;
+     }
+     .singleMessageHeart
+     {
+         display: flex;
+     }
+     .singleMessageHeart img
+     {
+         width: 24px;
+         height: 24px;
+         padding-right: 5px;
+     }
+     .containerQA
+     {
+         width: 80%;
+         margin-top:40px;
+     }
+     .containerCreateThread
+     {
+         margin-top:-70px;
+         width:90%;
+     }
+     .containerCreateThread .input
+     {
+         width:100%;
+     }
+     .buttonContainerProfile
+     {
+         width: 100%;
+         margin-top:40px;
+     }
+     #anagraficaButton, #postButton, #puntiButton
+     {
+         height: 30px;
+     }
+     .showInfo, .showInfoVisit, .showPost
+     {
+         margin-top:-30px;
+         width: 90%;
+     }
+     .showInfoVisit, .showPostVisit
+     {
+         margin-top:-30px;
+     }
+     .showMatricola
+     {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         width: 90%;
+         margin-left: 7%;
+         margin-top:30px;
+     }
+     .showMatricola p
+     {
+         margin: 0;
+         color: white;
+         font-size: 20px;
+     }
+     .anagraficaText
+     {
+         grid-template-columns: 35% 65%;
+     }
+     .singleTextLeft
+     {
+         padding-left: 20%;
+     }
+     .errorAfterPost
+     {
+         width:100%;
+         background-color:white;
+     }
+}
+
+
